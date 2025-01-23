@@ -22,3 +22,18 @@ public class ScopeTest {
         child.method();
     }
 }
+
+// 현재 상태 출력 결과
+// x : method
+// this.x : child
+// super.x : parent
+
+// method의 x 주석 결과
+// x : child
+// this.x : child
+// super.x : parent
+
+// child의 x 주석 결과
+// x : method
+// this.x : parent
+// super.x : parent
