@@ -7,7 +7,7 @@ public class InstanceOfTest {
     private void unsafeCasting() {
         Object obj = 1;
         String s = (String) obj;
-        System.out.println(s.length());
+        System.out.println(s.length()); // ClassCastException 오류 Integer는 .length() 사용불가
     }
 
     private void safeCasting() {

@@ -4,6 +4,8 @@ public class LoadingSequenceTest {
 
     private static LoadingSequenceTest lst = new LoadingSequenceTest();
     // TODO: array의 length가 10이 될 수 있도록 코드를 개선해보자.
+    // 코드 순서를 바꾸거나, final을 붙이면 길이가 10이 된다
+    // 순서대로 선언 후 순서대로 초기화 -> final은 상수라서 초기화도 같이라서 10이됨
      private static int SIZE = 10;
 
     // END
@@ -20,7 +22,7 @@ public class LoadingSequenceTest {
 
     public static void main(String[] args) {
         LoadingSequenceTest lst = LoadingSequenceTest.getInstance();
-        System.out.println(lst.array.length);
+        System.out.println(lst.array.length); // 0
     }
 
 }
