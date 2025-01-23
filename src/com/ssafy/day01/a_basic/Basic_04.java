@@ -15,7 +15,14 @@ public class Basic_04 {
         System.out.println(d3);
 
         // TODO: d1 - d2 를 정확히 계산해보자.
+        // 실수에서 정확하게 연산해야 한다.
+        // 실수 연산은 정확하지 않기 때문에 반올림 필요
+        System.out.println(((int)(d1*100) - (int)(d2*100)) / 100.0);
 
         // END
     }
 }
+
+//0.9
+//0.8999999999999999
+//0.9

@@ -22,11 +22,13 @@ class SingletonClass extends Object {
 public class SingletonTest {
 	public static void main(String[] args) {
 		// TODO:SingletonClass를 사용해보세요.
-		SingletonClass sc = new SingletonClass.getInstance();
+		SingletonClass sc = SingletonClass.getInstance();
 		sc.sayHello();
 
-		SingletonClass sc2 = new SingletonClass.getInstance();
+		SingletonClass sc2 = SingletonClass.getInstance();
 		sc2.sayHello();
+		
+		System.out.println(sc==sc2);
 		// END
 	}
 }

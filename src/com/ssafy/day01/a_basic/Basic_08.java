@@ -5,7 +5,7 @@ public class Basic_08 {
 
         int a = 10;
         int b = 20;
-        System.out.println((a > b) & (b > 0));
+        System.out.println((a > b) & (b > 0)); // F & T
 
         System.out.println((a += 10) > 15 | (b -= 10) > 15);
         System.out.println("a = " + a + ", b = " + b);
@@ -14,5 +14,12 @@ public class Basic_08 {
         b = 20;
         System.out.println((a += 10) > 15 || (b -= 10) > 15);
         System.out.println("a = " + a + ", b = " + b);
+
     }
 }
+
+//false
+//true
+//a = 20, b = 10
+//true
+//a = 20, b = 20

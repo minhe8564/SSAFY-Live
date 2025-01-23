@@ -1,12 +1,12 @@
 package com.ssafy.day01.a_basic;
 
 public class Basic_06 {
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
         int i = 1024;
         // 기본형 --> 참조
         Integer iw = Integer.valueOf(i);
-        Integer iw2 = i; // autoboxing
+        Integer iw2 = i; // autoboxing : 기본형 -> 참조형 그냥 바꿔줌
         System.out.printf("두 객체는 같은 객체? ==: %b, equals:%b\n", iw == iw2, iw.equals(iw2)); // -128 부터 127까지는 캐싱되어 있음
 
         // 참조형 --> 기본
@@ -35,3 +35,10 @@ public class Basic_06 {
 
     }
 }
+
+//두 객체는 같은 객체? ==: false, equals:true
+//두 값은 같은 값? true
+//두 문자열은 같은 객체? false
+//1024
+//두 문자열은 같은 객체? false
+//1024 : 1024

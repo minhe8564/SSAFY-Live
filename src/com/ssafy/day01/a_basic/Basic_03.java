@@ -6,6 +6,10 @@ public class Basic_03 {
 
         int i2 = i1 + 1;
         
+        System.out.println(i1);
         System.out.println(i2);
     }
 }
+
+//2147483647
+//-2147483648

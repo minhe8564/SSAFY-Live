@@ -12,6 +12,14 @@ public class InstanceOfTest {
 
     private void safeCasting() {
         // TODO: 위 메서드가 안전하게 형 변환할 수 있도록 수정해보자.
+    	Object obj = 1;
+    	if(obj instanceof Integer) { // obj 너 Integer 야???
+    		Integer num = (Integer)obj;
+    		System.out.println(num.intValue());
+    	}
+    	else {
+    		System.out.println("무슨 타입? " + obj.getClass().getName());
+    	}
 
         // END
     }
