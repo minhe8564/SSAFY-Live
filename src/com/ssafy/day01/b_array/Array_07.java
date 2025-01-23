@@ -14,8 +14,19 @@ public class Array_07 {
         int count = 0;
         int sum = 0;
         // TODO: 각 항의 숫자 중 3의 배수의 개수와 그들의 합을 출력하시오.
+        
+        for(int i = 0; i < grid.length; i++) {
+        	for(int j = 0; j < grid[0].length; j++) {
+        		if(grid[i][j] % 3 == 0) {
+        			count++;
+        			sum += grid[i][j];
+        		}
+        	}
+        }
 
         // END
         System.out.printf("개수: %d, 총합: %d%n", count, sum);
+        // 개수: 6, 총합: 87
+
     }
 }
