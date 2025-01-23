@@ -27,4 +27,13 @@ public class LoadingSequenceTest {
         System.out.println("SIZE: %d".formatted(SIZE));
         System.out.println("iArray 길이: %d".formatted(lst.iArray.length));
     }
+    
+//    static initializer
+//    SIZE: 10
+//    instance initializer
+//    constructor
+//    sArray 길이: 0
+//    SIZE: 1
+//    iArray 길이: 10
+
 }
