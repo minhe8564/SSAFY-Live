@@ -5,7 +5,11 @@ public class RelationShipTest {
         Object[] objs = { new HandPhone(), new Shaver(), new Phone(), new ElectricShaver() };
 
         // TODO: 충전 가능한 객체들을 충전하시오.
-
+        for(Object obj : objs) {
+        	if(obj instanceof Chargeable c) {
+        		c.charge();
+        	}
+        }
         // END
     }
 
