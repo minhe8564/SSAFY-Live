@@ -2,6 +2,7 @@ package com.ssafy.day07.c_map;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class MapTest {
@@ -23,21 +24,31 @@ public class MapTest {
 
     private void retrieveMethod() {
         // TODO: kate의 전화번호가 있나요?
-
+    	System.out.println("kate 전화번호 유뮤: " +hMap.containsKey("kate"));
         // END
 
         // TODO: map이 가지고 있는 key와 거기에 연결된 value를 출력하시오.
-
+    	Set<String> keys = hMap.keySet();
+    	for(String key : keys) {
+    		System.out.println(key + " : " + hMap.get(key));
+    	}
         // END
 
         // TODO: 값이 4567인 사람의 이름은?
-
+//    	System.out.println(hMap.containsValue("4567"));
+    	Set<Entry<String, String>> eset = hMap.entrySet();
+    	for(Entry<String, String> e: eset) {
+    		if(e.getValue().equals("4567")) {
+    			System.out.println(e.getKey());
+    			break;
+    		}
+    	}
         // END
     }
 
     private void removeMethod() {
         // TODO: andy의 자료를 삭제하고 출력하시오.
-
+    	hMap.remove("andy");
         // END
     }
 

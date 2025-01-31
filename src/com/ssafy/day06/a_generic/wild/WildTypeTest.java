@@ -59,4 +59,6 @@ public class WildTypeTest {
         boxPerson.setSome(new SpiderMan());
 
     }
+    
+    List
 }
