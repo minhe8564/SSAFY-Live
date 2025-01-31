@@ -8,7 +8,9 @@ public class AnnotationTest {
 
     private String[] blackList;
 
-    // TODO: 다음의 생성자를 deprecated 시켜보자.
+    // TODO: 다음의 생성자를 deprecated(더이상 사용되지 않음) 시켜보자.
+    // 생성자에 취소선 생김
+    @Deprecated
     public AnnotationTest() {
         blackList = new String[] { "hello", "java", "world" };
     }
@@ -28,6 +30,7 @@ public class AnnotationTest {
 
 
     // TODO: 다음 메서드에서 발생하는 warning들을 억눌러보자.
+    @SuppressWarnings(value = {"rawtypes"})
     public <T> T createInstance(Class<T> clazz) throws Exception {
         GenericBox box = new GenericBox();
         
@@ -42,5 +45,6 @@ public class AnnotationTest {
         return "black list: " + Arrays.toString(blackList);
 
     // END
+    }
 
 }

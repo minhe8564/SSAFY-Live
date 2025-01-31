@@ -7,7 +7,10 @@ public class GenericAttention<I> {
 
     public void useRawType() {
         // TODO: 다음에서 발생하는 warning을 제거해보자.
-        GenericBox box = new GenericBox();
+    	// row type 오류
+        @SuppressWarnings({"rawtypes", "unused"})
+//		GenericBox box = new GenericBox();
+        GenericBox<String> box = new GenericBox();
 
         // END
     }
@@ -16,10 +19,18 @@ public class GenericAttention<I> {
 
         GenericBox<Person> pbox = new GenericBox<>();
         // TODO: pbox에 담을 수 있는 객체를 담아보자.
-
+        // Person과 SpiderMan은 상속관계다
+        // 그렇다면 GenericBox는 상속관계인가??
+        // 불가능!! pbox는 Person 타입을 받을 수 있다.
+//        pbox.setSome(new Person());
+//        pbox.setSome(new SpiderMan());
+        
+        pbox = new GenericBox<Person>();
         // END
 
         // TODO: pbox를 다른 객체로 대체해보자.
+        GenericBox<SpiderMan> sbox = new GenericBox<>();
+        // pbox = sbox;
 
         // END
     }
