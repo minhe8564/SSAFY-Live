@@ -42,9 +42,17 @@ public class StreamMiddleTest {
 
         // TODO: 다음의 요청 사항을 stream으로 구현해보자.
         //  1. words에서 단어의 길이가 5 이상인 단어의 개수는?
+        long cnt  = words.stream().filter(item -> item.length() >= 5).count();
+        System.out.println("5글자 이상: " + cnt);
+        
         //  2. 오가 들어가는 단어 중 처음 4개를 생략하고 2개 출력해보자.
+        words.stream().filter(item -> item.contains("오")).skip(4).limit(2).forEach(System.out::println);
+        
+        
         //  3. 0~100 까지의 정수에서 짝수의 합을 구해보자.
-
+        int sum = IntStream.rangeClosed(0, 100).filter(item -> item%2 == 0).sum();
+        System.out.println("합: " + sum);
+        
         // END
 
     }

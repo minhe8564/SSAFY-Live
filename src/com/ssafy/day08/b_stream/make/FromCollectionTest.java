@@ -14,7 +14,17 @@ public class FromCollectionTest {
         List<String> heroList = fromArray.collect(Collectors.toList());
         
         // TODO: heroList를 통해 stream / parallel stream을 만들고 사용해보자.
+        // 순차 처리
+        heroList.stream().forEach(item -> 
+        	System.out.println( Thread.currentThread() + ": " + item));
+        System.out.println();
+
+        // 병렬 처리
+        heroList.parallelStream().forEach(item -> 
+    	System.out.println( Thread.currentThread() + ": " + item));
 
         // END
     }
 }
+
+
