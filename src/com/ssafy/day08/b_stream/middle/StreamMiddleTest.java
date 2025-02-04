@@ -50,6 +50,7 @@ public class StreamMiddleTest {
         
         
         //  3. 0~100 까지의 정수에서 짝수의 합을 구해보자.
+        // filter 매개변수 predicate
         int sum = IntStream.rangeClosed(0, 100).filter(item -> item%2 == 0).sum();
         System.out.println("합: " + sum);
         
