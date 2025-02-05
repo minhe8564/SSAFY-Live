@@ -1,15 +1,18 @@
 package com.ssafy.day09.d_custom;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class Test {
-
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		br.readLine();
-		
+	
+	int serialNumber;
+	
+	public Test(int serialNumber) {
+		this.serialNumber = serialNumber;
 	}
-
+	
+	public static void main(String[] args) {
+		Test[] t = {new Test(3), new Test(1), new Test(2)};
+		
+//		Arrays.sort(t);
+	}
 }

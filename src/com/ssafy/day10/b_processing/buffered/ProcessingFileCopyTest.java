@@ -13,13 +13,15 @@ public class ProcessingFileCopyTest {
     public static void main(String[] args) {
         File src = new File("c:/Windows/explorer.exe");
         File target = new File("c:/Temp/copied_explorer.exe");
-
+        
+        // 노드 스트림
         try (FileInputStream fi = new FileInputStream(src); FileOutputStream fo = new FileOutputStream(target);) {
             copy("노드", fi, fo);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+        // 버퍼 스트림
         try (BufferedInputStream bi = new BufferedInputStream(new FileInputStream(src));
                 BufferedOutputStream bo = new BufferedOutputStream(new FileOutputStream(target));) {
             copy("보조", bi, bo);

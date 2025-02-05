@@ -38,14 +38,23 @@ public class SimpleInputTest {
     private void read3() {
         char[] buffer = new char[10];
         // TODO: CharArrayReader를 이용해 data2를 읽고 출력하시오.
-
+        Reader reader = new CharArrayReader(data2.toCharArray());
+        
+        int read = -1;
+        try (reader) {
+        	while((read = reader.read(buffer)) > 0) {
+        		System.out.printf("읽은 개수: %d, 문자열: %s%n", read, new String(buffer, 0, read));
+        	}
+        } catch (IOException e) {
+        	e.printStackTrace();
+        }
         // END
     }
 
     public static void main(String[] args) {
         SimpleInputTest ns = new SimpleInputTest();
-        ns.read1();
+        // ns.read1();
         // ns.read2();
-        // ns.read3();
+        ns.read3();
     }
 }
