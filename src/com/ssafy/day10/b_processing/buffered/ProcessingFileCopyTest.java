@@ -43,3 +43,7 @@ public class ProcessingFileCopyTest {
 
     }
 }
+
+//타입: 노드, 소요 시간:   11403000ns
+//타입: 보조, 소요 시간:    3103000ns
+
